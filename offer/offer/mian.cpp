@@ -16,6 +16,8 @@
 #include"array_inverse_pair.h"
 //#include"min_k.h"
 #include"array_one_number.h"
+#include"GetNumberOfK.h"
+
 
 class A
 {
@@ -67,7 +69,7 @@ int main()
 	//A& rA = *(B*)pA;
 	//A oA = *(B*)pA;
 	//printf("%c,%c,%c,%c,%c,%c\n", pA->f(), pA->g(1u), rA.f(), rA.g(1), oA.f(), oA.g(1));
-
+	Test_GetNumberOfK();
 	return 0;
 }
 //1 2 2 3 3 3 4 4 4 4 5 5 5 5 5

@@ -76,6 +76,7 @@
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="FindKthToTail.h" />
     <ClInclude Include="first_char.h" />
+    <ClInclude Include="GetNumberOfK.h" />
     <ClInclude Include="int_one_count.h" />
     <ClInclude Include="mid_number.h" />
     <ClInclude Include="min_k.h" />
