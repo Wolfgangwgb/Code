@@ -113,18 +113,18 @@ public:
 		}
 	}
 
-	void InOrder()
+	void InOrder()//中序
 	{
 		cout << "InOrder" << endl;
 		_InOrder(_pRoot);
 		cout << endl;
 	}
-	size_t Height()
+	size_t Height()//高度
 	{
 		return _Height(_pRoot);
 	}
 
-	bool IsBalanceTree()
+	bool IsBalanceTree()//判断是不是平衡树
 	{
 		return _IsBlanceTree(_pRoot);
 	}
@@ -149,7 +149,6 @@ public:
 			}
 			else
 			{
-				//parent = pCur;
 				break;
 			}
 		}
