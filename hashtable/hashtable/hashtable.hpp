@@ -19,7 +19,9 @@ struct HashNode
 //1.第一次开辟空间的大小用非类型的类模板参数解决
 //2.重新开辟空间的大小用获取质数函数解决
 //3.二次探查
-template <class K, class V,size_t SIZE = 11>
+//4.类型(string)不同，可以用模板特化(想想，没尝试)，类型萃取
+
+template <class K, class V, size_t SIZE = 11>
 class Hashtable
 {
 	typedef pair<HashNode<K, V>*, bool> Pair;
@@ -37,7 +39,7 @@ public:
 		size_t i = 0;
 		Checkcapacity();
 		//计算存储位置 ----> 哈希函数
-		size_t Hashaddress = Hash_function(key);
+		size_t Hashaddress = Hash_function(key, i++);
 		size_t index = Hashaddress;
 		//找插入位置
 		while (_ht[index]._s == EXIST)
@@ -48,7 +50,7 @@ public:
 			//线性探查
 			//++index;
 			//二次探查
-			index = Hasn_function1(index,++i);
+			index = Hash_function(index, i++);
 			if (index == _ht.size())//查找到最后一个位置后回到打一个位置，用取模每次都要计算，
 				index = 0;
 			//if (index == Hashaddress)//有了容量检测，就不会填满
@@ -64,7 +66,8 @@ public:
 
 	Pair Find(const K& key)
 	{
-		size_t Hashaddress = Hash_function(key);
+		size_t i = 0;
+		size_t Hashaddress = Hash_function(key, i++);
 		size_t index = Hashaddress;
 		while (_ht[index]._s != EMPTY)
 		{
@@ -76,8 +79,9 @@ public:
 				else //if (elem._s == DELETE)
 					return Pair(NULL, false);
 			}
-			++index;
-			if (index == _ht.size())//查找到最后一个位置后回到打一个位置，没有用取模，？？？
+			//++index;
+			index = Hash_function(index, i++);
+			if (index == _ht.size())
 				index = 0;
 			if (index == Hashaddress)
 				return Pair(NULL, false);
@@ -97,13 +101,17 @@ public:
 		return false;
 	}
 private:
-	size_t Hash_function(K key)
+	//size_t Hash_function(K key)
+	//{
+	//	return key%_ht.size();
+	//}
+	//size_t Hasn_function1(size_t size,size_t i)
+	//{
+	//	return (size + (size_t)pow(i, 2))%_ht.size();
+	//}
+	size_t Hash_function(K key,size_t i)
 	{
-		return key%_ht.size();
-	}
-	size_t Hasn_function1(size_t size,size_t i)
-	{
-		return (size + (size_t)pow(i, 2))%_ht.size();
+		return (key%_ht.size() + (size_t)pow(i, 2)) % _ht.size();
 	}
 
 	void Checkcapacity()
@@ -146,9 +154,8 @@ private:
 	}
 private:
 	vector<HashNode<K,V>> _ht;
-	size_t _size;
+	size_t _size;//有效元素个数
 };
-
 
 void Test()
 {
@@ -158,12 +165,12 @@ void Test()
 	{
 		ht.Insert(a[index],index);
 	}
-	ht.Insert(24,8);
+	//ht.Insert(24,8);
 	//ht.Insert(42, 9);
 	//ht.Insert(66, 10);
 	//ht.Insert(78, 11);
-	//pair<HashNode<int,int>*, bool> h = ht.Find(14);
-	//pair<HashNode<int, int>*, bool> h1 = ht.Find(15);
+	pair<HashNode<int,int>*, bool> h = ht.Find(14);
+	pair<HashNode<int, int>*, bool> h1 = ht.Find(36);
 
 	//if (ht.Remove(14))
 	//	cout << "True" << endl;
