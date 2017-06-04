@@ -18,6 +18,7 @@ struct HashNode
 };
 //1.第一次开辟空间的大小用非类型的类模板参数解决
 //2.重新开辟空间的大小用获取质数函数解决
+//3.二次探查
 template <class K, class V,size_t SIZE = 11>
 class Hashtable
 {
@@ -33,6 +34,7 @@ public:
 	}
 	bool Insert(const K& key,const V& value)
 	{
+		size_t i = 0;
 		Checkcapacity();
 		//计算存储位置 ----> 哈希函数
 		size_t Hashaddress = Hash_function(key);
@@ -43,16 +45,20 @@ public:
 			HashNode<K, V>& elem = _ht[index];
 			if (elem._hn.first == key)
 				return false;
-			++index;
-			if (index == _ht.size())//查找到最后一个位置后回到打一个位置，没有用取模，？？？
+			//线性探查
+			//++index;
+			//二次探查
+			index = Hasn_function1(index,++i);
+			if (index == _ht.size())//查找到最后一个位置后回到打一个位置，用取模每次都要计算，
 				index = 0;
-			if (index == Hashaddress)
-				return false;
+			//if (index == Hashaddress)//有了容量检测，就不会填满
+				//return false;
 		}
 		//出了循环两种状态 EMPTY DELETE
 		_ht[index]._hn.first = key;
 		_ht[index]._hn.second = value;
 		_ht[index]._s = EXIST;
+		i = 0;
 		++_size;
 	}
 
@@ -94,6 +100,10 @@ private:
 	size_t Hash_function(K key)
 	{
 		return key%_ht.size();
+	}
+	size_t Hasn_function1(size_t size,size_t i)
+	{
+		return (size + (size_t)pow(i, 2))%_ht.size();
 	}
 
 	void Checkcapacity()
@@ -159,4 +169,15 @@ void Test()
 	//	cout << "True" << endl;
 	//else
 	//	cout << "False" << endl;
+}
+
+void Test1()
+{
+	string str = "abcdefghijklmn";
+	Hashtable<char, char> ht;
+	for (size_t index = 0; index < str.length(); ++index)
+	{
+		ht.Insert(str.at(index), str.at(index));
+	}
+	//ht.Insert(24, 8);
 }
