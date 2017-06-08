@@ -24,11 +24,12 @@ struct HashNode
 //1.第一次开辟空间的大小用非类型的类模板参数解决
 //2.重新开辟空间的大小用获取质数函数解决
 //3.二次探查
-//4.类型(string)不同，可以用模板特化/类型萃取
-//string类型用字符串的长度来计算哈希地址
-//用类型萃取识别string和内置类型
+//4.类型(string)不同，可以用模板特化+类模板参数
+//5.哈希函数用模板参数
 
-template <class K, class V,size_t SIZE = 11>
+
+//template <class K, class V,class Hash_function,size_t SIZE = 11>
+template <class K, class V, template <class> class Hash_function, size_t SIZE = 11>
 class Hashtable
 {
 	typedef pair<HashNode<K, V>*, bool> Pair;
@@ -46,7 +47,8 @@ public:
 		size_t i = 0;
 		Checkcapacity();
 		//计算存储位置 ----> 哈希函数
-		size_t Hashaddress = Hash_function(key,i);
+		//size_t Hashaddress = Hash_function(key, _ht.size(),i);
+		size_t Hashaddress = Hash_function<K>()(key, _ht.size(),i);
 		size_t index = Hashaddress;
 		//找插入位置
 
@@ -58,8 +60,8 @@ public:
 			//线性探查
 			//++index;
 			//二次探查。
-			index = Hash_function(key, ++i);
-
+			//index = Hash_function(key,_ht.size() ++i);
+			index = Hash_function<K>()(key, _ht.size(), ++i);
 			if (index == _ht.size())//查找到最后一个位置后回到打一个位置，用取模每次都要计算，
 				index = 0;
 		}
@@ -69,12 +71,15 @@ public:
 		_ht[index]._s = EXIST;
 		i = 0;
 		++_size;
+		return true;
 	}
 
 	Pair Find(const K& key)
 	{
 		size_t i = 0;
-		size_t Hashaddress = Hash_function(key, i);
+		//size_t Hashaddress = Hash_function(key, _ht.size(), i);
+		size_t Hashaddress = Hash_function<K>()(key, _ht.size(), i);
+
 		size_t index = Hashaddress;
 
 		while (_ht[index]._s != EMPTY)
@@ -87,8 +92,9 @@ public:
 				else //if (elem._s == DELETE)
 					return Pair(NULL, false);
 			}
-			//++index;
-			index = Hash_function(key, ++i);
+			//index = Hash_function(key, _ht.size(), ++i);
+			index = Hash_function<K>()(key,_ht.size(), ++i);
+
 			if (index == _ht.size())
 				index = 0;
 			if (index == Hashaddress)
@@ -109,23 +115,6 @@ public:
 		return false;
 	}
 private:
-	//size_t Hash_function(K key)
-	//{
-	//	return key%_ht.size();
-	//}
-	//size_t Hasn_function1(size_t size,size_t i)
-	//{
-	//	return (size + (size_t)pow(i, 2))%_ht.size();
-	//}
-	//////////////////////////////////////////////
-	//////////////二次探查////////////////////
-
-	size_t Hash_function(K key,size_t i)//二次探查哈希函数
-	{
-		size_t _key = Hash<K>()(key);//无名对象
-		return (_key%_ht.size() + (size_t)pow(i, 2)) % _ht.size();
-	}
-
 	void Checkcapacity()
 	{
 		if (_size == _ht.size())
@@ -133,7 +122,9 @@ private:
 		else if (_size * 10 / _ht.size() == 5)//(_size / _ht.size() == 0.7)//二次探查要求载荷因子为0.5
 		{//@荷载因子 = 有效元素个数/散列表长度
 			size_t Newsize = Prime_num(_ht.size() * 2);//重新开辟空间的大小用获取质数函数解决
-			Hashtable<K, V> ht(Newsize);
+			//Hashtable<K, V,Hash_function<K>> ht(Newsize);
+			Hashtable<K, V, Hash_function> ht(Newsize);
+
 			for (size_t i = 0; i < _ht.size(); ++i)
 			{
 				if (_ht[i]._s == EXIST)
@@ -172,7 +163,7 @@ private:
 void Test()
 {
 	int a[] = { 37, 25, 14, 36, 49, 68, 57, 11 };
-	Hashtable<int, int> ht;
+	Hashtable<int, int, Hash_function_second> ht;
 	for (size_t index = 0; index < sizeof(a) / sizeof(a[0]); ++index)
 	{
 		ht.Insert(a[index], index);
@@ -190,21 +181,12 @@ void Test()
 		cout << "False" << endl;
 }
 
-//void Test1()
-//{
-//	string str = "abcdefghijklmn";
-//	Hashtable<char, char> ht;
-//	for (size_t index = 0; index < str.length(); ++index)
-//	{
-//		ht.Insert(str.at(index), str.at(index));
-//	}
-//	//ht.Insert(24, 8);
-//}
+
 
 void Test2()
 {
 	string s[] = { "abc", "cde", "fgh", "ijk" };
-	Hashtable<string, int> ht1;
+	Hashtable<string, int, Hash_function_second> ht1;
 	for (size_t index = 0; index <sizeof(s) / sizeof(s[0]); ++index)
 	{
 		ht1.Insert(s[index], index);

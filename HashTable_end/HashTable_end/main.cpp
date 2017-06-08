@@ -4,7 +4,7 @@
 
 int main()
 {
-	//Test();
+	Test();
 	Test2();
 	return 0;
 }
