@@ -3,6 +3,9 @@
 
 int main()
 {
-	test();
+	//test();
+	//test2();
+	cout << Add(1,2) << endl;;
+
 	return 0;
 }
