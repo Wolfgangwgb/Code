@@ -2,7 +2,7 @@
 //#include"stack.hpp"
 //#include"$$$.hpp"
 #include"mystack.hpp"
-
+#include"in_out_stack_legal.hpp"
 
 
 int main()
@@ -11,7 +11,8 @@ int main()
 	//char* str = "I am wgb";
 	//char* ret = Replace(str,20);
 
-	Testsk();
+	//Testsk();
 	//Test1();
+	In_Out_Stack();
 	return 0;
 }

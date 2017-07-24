@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="$$$.hpp" />
+    <ClInclude Include="in_out_stack_legal.hpp" />
     <ClInclude Include="mystack.hpp" />
     <ClInclude Include="queue.hpp" />
     <ClInclude Include="stack.hpp" />

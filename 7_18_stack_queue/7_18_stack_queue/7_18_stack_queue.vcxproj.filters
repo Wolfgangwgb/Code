@@ -27,6 +27,9 @@
     <ClInclude Include="mystack.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="in_out_stack_legal.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="man.cpp">
