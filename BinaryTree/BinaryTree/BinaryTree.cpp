@@ -200,11 +200,37 @@ public:
 	{
 		return _PublicAncestor(_pRoot,x,y);
 	}
+	//判断一个结点是否在二叉树中
+	bool Node_is_Tree(const T& value)
+	{
+		/*
+		if (_Find(_pRoot, value) == NULL)
+			return false;
+		return true;
+		*/
+	
+	}
+
 	~BinaryTree()
 	{
 		_DestroyTree(_pRoot);
 	}
 private:
+
+	Node* _Node_is_Tree(Node* pRoot,const T& value)
+	{
+		if (NULL == pRoot)
+			return NULL;
+		if (pRoot->_data == value)
+			return pRoot;
+		Node* pCur = NULL;
+		if (pCur = _Node_is_Tree(pRoot->_pLeft, value))
+			return pCur;
+		if (pCur = _Node_is_Tree(pRoot->_pRight, value))
+			return pCur;
+		return NULL;
+	}
+
 	//利用先序创建
 	void _CreateTree(Node*& pRoot, const T array[], size_t size, size_t& index, const T& invalid)
 	{
@@ -275,7 +301,8 @@ private:
 		return  LeftHight>RightHight ? LeftHight + 1 : RightHight+1;
 	}
 
-	//size_t GetLeefNode()//叶子结点个数
+	//size_t GetLeefNode()
+	//叶子结点个数
 	size_t _GetLeefNode(Node* pRoot)
 	{
 		if (NULL == pRoot)
@@ -547,9 +574,22 @@ void Test1()
 {
 	char* ptr = "124###35##6";
 	BinaryTree<char> bt(ptr, strlen(ptr), '#');
-	bt.PreOrder();
-	bt.prepoder();
-	//bt.InOrder();
+	//bt.PreOrder();
+	//bt.prepoder();
+	bt.InOrder();
+	//bt.Find(4);
+	if (bt.Node_is_Tree('4'))
+		cout << "Yes 4" << endl;
+	else
+		cout << "4 No" << endl;
+
+	if (bt.Node_is_Tree('7'))
+		cout << "Yes 7" << endl;
+	else
+		cout << "7 No" << endl;
+
+
+
 	//bt.Inorder();
 	//bt.PostOrder();
 	//bt.Postorder();
@@ -580,7 +620,7 @@ void Test2()
 int main()
 {
 	//Test();
-	//Test1();
-	Test2();
+	Test1();
+	//Test2();
 	return 0;
 }
