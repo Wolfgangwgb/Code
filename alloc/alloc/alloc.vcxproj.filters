@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="alloc.hpp">
+    <ClInclude Include="simple_malloc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="simple_malloc.hpp">
+    <ClInclude Include="Stlalloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stl_construct.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

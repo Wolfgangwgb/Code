@@ -64,8 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="alloc.hpp" />
-    <ClInclude Include="simple_malloc.hpp" />
+    <ClInclude Include="Stlalloc.h" />
+    <ClInclude Include="simple_malloc.h" />
+    <ClInclude Include="stl_construct.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
