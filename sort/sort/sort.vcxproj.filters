@@ -26,5 +26,8 @@
     <ClInclude Include="select.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="merge_sort.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
