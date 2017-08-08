@@ -18,6 +18,12 @@
     <ClInclude Include="bitmap.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bloom_filter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

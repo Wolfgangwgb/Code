@@ -16,7 +16,8 @@ public:
 	{
 		size_t index = num >> 5;
 		size_t pos = num % 32;
-		_vt[index] |= (1<<pos);
+		_vt[index] |= (1 << pos);//从右至左依次增大
+		//_vt[index] |= (1<<(31-pos));//从左至右依次增大
 	}
 
 	//设置某个数的位置为0
