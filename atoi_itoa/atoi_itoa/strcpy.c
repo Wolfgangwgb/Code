@@ -66,6 +66,63 @@ void* memmove_my(void* dest, const void*src, size_t count)
 	}
 	return dest;
 }
+/////////////////////////////////////////
+//strstr
+char* strstr_my(const char* str1, const char* str2)
+{
+	assert(str1 != NULL &&str2 != NULL);
+	const char* start = str2;
+	const char* pstr2 = str2;
+
+	while (*str1 != '\0')
+	{
+		if (*str1 != *pstr2)
+			++str1;
+		else
+		{
+			start = str1;
+			while (*pstr2 != '\0')
+			{
+				++str1;
+				++pstr2;
+				if (*pstr2 != *str1&&*pstr2 != '\0')
+				{
+					pstr2 = str2;
+					++str1;
+					break;
+				}
+			}
+			if (*pstr2 == '\0')
+				return (char*)start;
+		}
+	}
+	return NULL;
+}
+
+char* strstr_my_second(const char* str1, const char* str2)
+{
+	assert(str1 != NULL &&str2 != NULL);
+	const char* start = str1;
+	const char* pstr1 = str1;
+	const char* pstr2 = str2;
+
+	while (*start != '\0')
+	{
+		pstr1 = start;
+		pstr2 = str2;
+		while ((*pstr2 == *pstr1) && *pstr2 != '\0')
+		{
+			++pstr1;
+			++pstr2;
+		}
+		if (*pstr2 == '\0')
+			return (char*)start;
+
+		++start;
+	}
+	return NULL;
+}
+
 int main()
 {
 	char s[10] = "hello";
@@ -75,3 +132,4 @@ int main()
 	memmove(s+1,s,5);
 	return 0;
 }
+
