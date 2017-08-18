@@ -67,6 +67,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="string_ref_int.h" />
+    <ClInclude Include="string_ref_static.h" />
     <ClInclude Include="string_shallow_copy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

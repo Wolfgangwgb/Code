@@ -23,5 +23,11 @@
     <ClInclude Include="string_shallow_copy.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="string_ref_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="string_ref_static.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
