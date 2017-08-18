@@ -5,6 +5,7 @@
 #include"string_copy_on_write.h"
 #include"string_deep_copy_one.h"
 #include"string_deep_copy_second.h"
+#include"string_deep_copy_third.h"
 
 int main()
 {
@@ -15,5 +16,6 @@ int main()
 	Test_copy();
 	Test_d1();
 	Test_d2();
+	Test_d3();
 	return 0;
 }
