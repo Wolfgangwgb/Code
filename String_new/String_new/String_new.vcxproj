@@ -67,6 +67,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="string_copy_on_write.h" />
     <ClInclude Include="string_ref_int.h" />
     <ClInclude Include="string_ref_pointer.h" />
     <ClInclude Include="string_ref_static.h" />

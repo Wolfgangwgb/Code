@@ -32,5 +32,8 @@
     <ClInclude Include="string_ref_pointer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="string_copy_on_write.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
