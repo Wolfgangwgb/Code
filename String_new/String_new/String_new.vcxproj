@@ -69,6 +69,7 @@
   <ItemGroup>
     <ClInclude Include="string_copy_on_write.h" />
     <ClInclude Include="string_deep_copy_one.h" />
+    <ClInclude Include="string_deep_copy_second.h" />
     <ClInclude Include="string_ref_int.h" />
     <ClInclude Include="string_ref_pointer.h" />
     <ClInclude Include="string_ref_static.h" />
