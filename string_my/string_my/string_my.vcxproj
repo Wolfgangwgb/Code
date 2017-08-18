@@ -70,9 +70,11 @@
     <ClInclude Include="string.h" />
     <ClInclude Include="String_copy_on_write.h" />
     <ClInclude Include="string_int_count.h" />
-    <ClInclude Include="string_one.h" />
+    <ClInclude Include="string_s_one.h" />
     <ClInclude Include="String_pointer_int.h" />
     <ClInclude Include="string_static_int.h" />
+    <ClInclude Include="string_s_second.h" />
+    <ClInclude Include="string_s_third.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
