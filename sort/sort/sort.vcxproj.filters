@@ -20,13 +20,28 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="insert_sort.hpp">
+    <ClInclude Include="Bubblesort.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="select.hpp">
+    <ClInclude Include="Binary_search.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="merge_sort.hpp">
+    <ClInclude Include="arr_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="heap_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="insert_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="merge_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="quick_sort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="select.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

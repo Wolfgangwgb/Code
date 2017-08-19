@@ -67,9 +67,14 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="insert_sort.hpp" />
-    <ClInclude Include="merge_sort.hpp" />
-    <ClInclude Include="select.hpp" />
+    <ClInclude Include="arr_sort.h" />
+    <ClInclude Include="Binary_search.h" />
+    <ClInclude Include="Bubblesort.h" />
+    <ClInclude Include="heap_sort.h" />
+    <ClInclude Include="insert_sort.h" />
+    <ClInclude Include="merge_sort.h" />
+    <ClInclude Include="quick_sort.h" />
+    <ClInclude Include="select.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
