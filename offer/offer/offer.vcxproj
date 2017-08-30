@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="array.h" />
     <ClInclude Include="blank.h" />
   </ItemGroup>
   <ItemGroup>
