@@ -66,6 +66,8 @@
   <ItemGroup>
     <ClInclude Include="array.h" />
     <ClInclude Include="blank.h" />
+    <ClInclude Include="min_stack.h" />
+    <ClInclude Include="one_count.h" />
     <ClInclude Include="two_stack_queue.h" />
   </ItemGroup>
   <ItemGroup>

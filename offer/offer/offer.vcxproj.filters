@@ -24,6 +24,12 @@
     <ClInclude Include="two_stack_queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="min_stack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="one_count.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">
