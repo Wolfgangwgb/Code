@@ -30,6 +30,9 @@
     <ClInclude Include="one_count.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Fibonacci.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">
