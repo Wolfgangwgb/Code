@@ -66,6 +66,7 @@
   <ItemGroup>
     <ClInclude Include="array.h" />
     <ClInclude Include="blank.h" />
+    <ClInclude Include="two_stack_queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp" />
