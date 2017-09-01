@@ -4,6 +4,7 @@
 #include"min_stack.h"
 #include"one_count.h"
 #include"Fibonacci.h"
+#include"pop_stack.h"
 
 int main()
 {
@@ -12,6 +13,7 @@ int main()
 	//Test_stack();
 	//Test_min_stack();
 	//Test_one();
-	Test_fib();
+	//Test_fib();
+	Test_popstack();
 	return 0;
 }

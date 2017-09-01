@@ -69,6 +69,7 @@
     <ClInclude Include="Fibonacci.h" />
     <ClInclude Include="min_stack.h" />
     <ClInclude Include="one_count.h" />
+    <ClInclude Include="pop_stack.h" />
     <ClInclude Include="two_stack_queue.h" />
   </ItemGroup>
   <ItemGroup>
