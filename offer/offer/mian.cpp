@@ -6,6 +6,7 @@
 #include"Fibonacci.h"
 #include"pop_stack.h"
 #include"odd_even_number.h"
+#include"arra_half.h"
 
 int main()
 {
@@ -16,6 +17,7 @@ int main()
 	//Test_one();
 	//Test_fib();
 	//Test_popstack();
-	Test_odd_even();
+//	Test_odd_even();
+	Test_array_min();
 	return 0;
 }
