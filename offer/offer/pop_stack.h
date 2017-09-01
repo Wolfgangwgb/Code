@@ -11,7 +11,7 @@ public:
 	{
 		if (pushV.size() != popV.size())
 			return false;
-		stack<int> s;
+		stack<int> s;//¸¨ÖúÕ»
 		for (int i = 0,j=0; i < pushV.size();)
 		{
 			s.push(pushV[i++]);

@@ -36,6 +36,12 @@
     <ClInclude Include="pop_stack.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="double_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="odd_even_number.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">
