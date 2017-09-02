@@ -48,6 +48,12 @@
     <ClInclude Include="array_repeat.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ugly_number.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="subarray_sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">

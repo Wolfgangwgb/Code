@@ -74,7 +74,9 @@
     <ClInclude Include="odd_even_number.h" />
     <ClInclude Include="one_count.h" />
     <ClInclude Include="pop_stack.h" />
+    <ClInclude Include="subarray_sum.h" />
     <ClInclude Include="two_stack_queue.h" />
+    <ClInclude Include="ugly_number.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp" />

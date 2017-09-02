@@ -8,6 +8,8 @@
 #include"odd_even_number.h"
 #include"arra_half.h"
 #include"array_repeat.h"
+#include"ugly_number.h"
+#include"subarray_sum.h"
 
 int main()
 {
@@ -20,6 +22,8 @@ int main()
 	//Test_popstack();
 //	Test_odd_even();
 	//Test_array_min();
-	Test_array_repeat();
+	//Test_array_repeat();
+	//Test_ugly_number();
+	Test_subarray();
 	return 0;
 }
