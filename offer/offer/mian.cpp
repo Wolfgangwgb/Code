@@ -10,6 +10,7 @@
 #include"array_repeat.h"
 #include"ugly_number.h"
 #include"subarray_sum.h"
+#include"int_one_count.h"
 
 int main()
 {
@@ -24,6 +25,7 @@ int main()
 	//Test_array_min();
 	//Test_array_repeat();
 	//Test_ugly_number();
-	Test_subarray();
+	//Test_subarray();
+	Test_int_one_count();
 	return 0;
 }

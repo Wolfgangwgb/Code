@@ -70,6 +70,7 @@
     <ClInclude Include="blank.h" />
     <ClInclude Include="double_int.h" />
     <ClInclude Include="Fibonacci.h" />
+    <ClInclude Include="int_one_count.h" />
     <ClInclude Include="min_stack.h" />
     <ClInclude Include="odd_even_number.h" />
     <ClInclude Include="one_count.h" />
