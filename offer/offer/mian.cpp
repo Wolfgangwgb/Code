@@ -11,6 +11,8 @@
 #include"ugly_number.h"
 #include"subarray_sum.h"
 #include"int_one_count.h"
+#include"mid_number.h"
+#include"first_char.h"
 
 int main()
 {
@@ -26,6 +28,8 @@ int main()
 	//Test_array_repeat();
 	//Test_ugly_number();
 	//Test_subarray();
-	Test_int_one_count();
+	//Test_int_one_count();
+	//Test_mid_number();
+	Test_first_char();
 	return 0;
 }

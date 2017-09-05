@@ -57,6 +57,15 @@
     <ClInclude Include="int_one_count.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="mid_number.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="array_min_number.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="first_char.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">
