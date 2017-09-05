@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="array.h" />
+    <ClInclude Include="array_inverse_pair.h" />
     <ClInclude Include="array_min_number.h" />
     <ClInclude Include="array_repeat.h" />
     <ClInclude Include="arra_half.h" />

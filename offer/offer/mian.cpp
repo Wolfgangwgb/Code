@@ -13,6 +13,7 @@
 #include"int_one_count.h"
 #include"mid_number.h"
 #include"first_char.h"
+#include"array_inverse_pair.h"
 
 int main()
 {
@@ -30,6 +31,7 @@ int main()
 	//Test_subarray();
 	//Test_int_one_count();
 	//Test_mid_number();
-	Test_first_char();
+	//Test_first_char();
+	Test_array_inverse();
 	return 0;
 }
