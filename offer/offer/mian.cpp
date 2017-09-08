@@ -14,8 +14,8 @@
 #include"mid_number.h"
 #include"first_char.h"
 #include"array_inverse_pair.h"
-#include"min_k.h"
-
+//#include"min_k.h"
+#include"array_one_number.h"
 
 class A
 {
@@ -58,7 +58,8 @@ int main()
 	//Test_mid_number();
 	//Test_first_char();
 	//Test_array_inverse();
-	Test_min_k();
+	//Test_min_k();
+	Test_arr_two_first();
 	//A* pA = new B;
 	//A& rA = *(B*)pA;
 	//A oA = *(B*)pA;
