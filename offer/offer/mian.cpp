@@ -14,7 +14,32 @@
 #include"mid_number.h"
 #include"first_char.h"
 #include"array_inverse_pair.h"
+#include"min_k.h"
 
+
+class A
+{
+public:
+	virtual char f()
+	{
+		return'f';
+	}
+	char g(int n)
+	{
+		return 'g';
+	}
+};
+
+class B : public A
+{
+public:
+	char f(){ return 'F'; }
+protected:
+	virtual char g(unsigned int n)
+	{
+		return (char)('g' + n);
+	}
+};
 int main()
 {
 	//Test_blank();
@@ -32,6 +57,11 @@ int main()
 	//Test_int_one_count();
 	//Test_mid_number();
 	//Test_first_char();
-	Test_array_inverse();
+	//Test_array_inverse();
+	Test_min_k();
+	//A* pA = new B;
+	//A& rA = *(B*)pA;
+	//A oA = *(B*)pA;
+	//printf("%c,%c,%c,%c,%c,%c\n", pA->f(), pA->g(1u), rA.f(), rA.g(1), oA.f(), oA.g(1));
 	return 0;
 }

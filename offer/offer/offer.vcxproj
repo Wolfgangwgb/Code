@@ -75,6 +75,7 @@
     <ClInclude Include="first_char.h" />
     <ClInclude Include="int_one_count.h" />
     <ClInclude Include="mid_number.h" />
+    <ClInclude Include="min_k.h" />
     <ClInclude Include="min_stack.h" />
     <ClInclude Include="odd_even_number.h" />
     <ClInclude Include="one_count.h" />
