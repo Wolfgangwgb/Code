@@ -71,8 +71,10 @@
     <ClInclude Include="array_repeat.h" />
     <ClInclude Include="arra_half.h" />
     <ClInclude Include="blank.h" />
+    <ClInclude Include="deleteDuplication.h" />
     <ClInclude Include="double_int.h" />
     <ClInclude Include="Fibonacci.h" />
+    <ClInclude Include="FindKthToTail.h" />
     <ClInclude Include="first_char.h" />
     <ClInclude Include="int_one_count.h" />
     <ClInclude Include="mid_number.h" />

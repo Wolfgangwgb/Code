@@ -75,6 +75,12 @@
     <ClInclude Include="array_one_number.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="deleteDuplication.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FindKthToTail.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mian.cpp">
