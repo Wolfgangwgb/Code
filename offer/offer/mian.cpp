@@ -40,6 +40,9 @@ protected:
 		return (char)('g' + n);
 	}
 };
+
+
+
 int main()
 {
 	//Test_blank();
@@ -59,10 +62,14 @@ int main()
 	//Test_first_char();
 	//Test_array_inverse();
 	//Test_min_k();
-	Test_arr_two_first();
+	//Test_arr_two_first();
 	//A* pA = new B;
 	//A& rA = *(B*)pA;
 	//A oA = *(B*)pA;
 	//printf("%c,%c,%c,%c,%c,%c\n", pA->f(), pA->g(1u), rA.f(), rA.g(1), oA.f(), oA.g(1));
+
 	return 0;
 }
+//1 2 2 3 3 3 4 4 4 4 5 5 5 5 5
+//3
+//2*3
