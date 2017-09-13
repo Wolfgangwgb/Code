@@ -78,18 +78,20 @@
     <ClInclude Include="first_char.h" />
     <ClInclude Include="GetNumberOfK.h" />
     <ClInclude Include="int_one_count.h" />
+    <ClInclude Include="LeftRotateString.h" />
     <ClInclude Include="mid_number.h" />
     <ClInclude Include="min_k.h" />
     <ClInclude Include="min_stack.h" />
     <ClInclude Include="odd_even_number.h" />
     <ClInclude Include="one_count.h" />
     <ClInclude Include="pop_stack.h" />
+    <ClInclude Include="ReverseSentence.h" />
     <ClInclude Include="subarray_sum.h" />
     <ClInclude Include="two_stack_queue.h" />
     <ClInclude Include="ugly_number.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mian.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

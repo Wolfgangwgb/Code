@@ -43,8 +43,9 @@ int main()
 	//Test_array_inverse();
 	//Test_min_k();
 	//Test_arr_two_first();
-
+	//Test_GetNumberOfK();
 	//Test_ReverseSentence();
 	Test_LeftRotateString();
 	return 0;
 }
+
